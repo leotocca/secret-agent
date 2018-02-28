@@ -1,0 +1,17 @@
+html {
+  font-size: 18px;
+  font-family: Helvetica;
+  Color: white;
+}
+
+.content {
+  width: 960px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  background-color: black;
+}

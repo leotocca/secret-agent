@@ -238,14 +238,21 @@ footer .text {
   }
 }
 
-@media only screen and (max-width: 470) {
+@media only screen and (max-width: 470px) {
+
     .container-banner {
-      height: 15rem;
+      height: 18rem;
     }
+
+    .mobilenav {
+      clear: both;
+    }
+
     .description {
       width: 100%;
       margin-top: 10rem;
     }
+
     .description h2 {
       margin-top: 1rem;
       font-size: 0.77rem;
@@ -264,12 +271,25 @@ footer .text {
     }
 
     .findus {
-      flex-wrap: wrap;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .title {
+      width: 90%;
+      margin-top: 0.5rem;
     }
 
     footer .container {
+      display: flex;
       justify-content: center;
       align-items: center;
+    }
+
+    footer .text {
+      font-size: 0.8rem;
+      align-self: center;
     }
 
 }

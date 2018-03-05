@@ -88,9 +88,14 @@ nav {
   background-color: firebrick;
 }
 
-ul {
+.desktopnav {
   display: flex;
   justify-content: space-between;
+}
+
+.mobilenav {
+  display: flex;
+  justify-content: center;
 }
 
 nav span {
@@ -117,7 +122,7 @@ nav span {
 
 .image3 img {
   height: 9rem;
-  width: auto;
+  width: 100%;
 }
 
 .image1, .image2, .image3 {
@@ -162,7 +167,8 @@ nav span {
 }
 
 .locationsdetail span {
-  margin-top: 1rem;
+  display: inline-block;
+  margin-top: 0.5rem;
 }
 
 .title h3 {
@@ -181,20 +187,89 @@ nav span {
 
 footer {
   background-color: black;
-  height: 5rem;
   margin-top: 4rem;
 }
 
 footer .container {
   display: flex;
   justify-content: center;
+  height: 5rem;
+  align-items: center;
 }
 
 footer .container2 {
+  display: flex;
+  align-items: center;
   width: 960px;
 }
 
 footer .text {
   font-family: Helvetica;
   align-self: center;
+}
+
+/* Responsive */
+
+@@media only screen and (min-width: 1024px) {
+  .mobilenav {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1024px){
+  .image3 {
+    display: none;
+  }
+  .image1, .image2 {
+    width: 47%;
+  }
+  .cards {
+    justify-content: space-around;
+  }
+  .findus {
+    justify-content: space-around;
+  }
+  footer .text {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  .desktopnav {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 470) {
+    .container-banner {
+      height: 15rem;
+    }
+    .description {
+      width: 100%;
+      margin-top: 10rem;
+    }
+    .description h2 {
+      margin-top: 1rem;
+      font-size: 0.77rem;
+    }
+
+    .description h1 {
+      font-size: 1rem;
+    }
+
+    .image2, .image3 {
+      display: none;
+    }
+
+    .image1 {
+      width: 90%;
+    }
+
+    .findus {
+      flex-wrap: wrap;
+    }
+
+    footer .container {
+      justify-content: center;
+      align-items: center;
+    }
+
 }
